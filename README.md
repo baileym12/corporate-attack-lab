@@ -1,8 +1,5 @@
 # **Cororate CTF Simulation: Creation Process & Security Analysis**
 
-## **Penetration Testing, Lateral Movement, and Remediation Design**
-
----
 
 ## **Overview**
 
@@ -15,7 +12,6 @@ This **Enterprise Capture The Flag Simulation** replicates a real-world, multi-s
 
 The primary goal was to simulate full attacker lifecycle activity, including initial access, credential harvesting, privilege escalation, lateral movement, data exfiltration, and remote code execution, while simultaneously identifying and documenting **remediation strategies** and **enterprise security controls** applicable to each scenario.
 
----
 
 ## **Project Objectives**
 
@@ -23,8 +19,6 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * Practice offensive penetration testing methodologies.
 * Highlight and document real-world remediation techniques.
 * Demonstrate an understanding of secure architecture and system hardening.
-
----
 
 
 ## **Key Security Competencies Demonstrated**
@@ -36,7 +30,6 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * **Network Security Architecture:** Segmentation, access control, defense-in-depth design.
 * **Security Automation:** Continuous integration of static code analysis, secrets scanning, and system auditing.
 
----
 
 ## **Creation Process & Security Analysis**
 
@@ -48,11 +41,13 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * No input validation or output sanitization was implemented.
 * No server-side access control was enforced beyond weak credentials.
 
+
 #### **Risk and Business Impact**
 
 * **Severity:** High
 * **Attack Surface:** Public Internet
 * **Impact:** Credential exposure led to unauthorized access to internal file transfer services. In a real-world scenario, this could enable attackers to pivot into internal networks or exfiltrate sensitive proprietary data (e.g., pharmaceutical R\&D intellectual property).
+
 
 #### **Remediation & Secure Implementation**
 
@@ -68,7 +63,6 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * Conduct automated code scanning for accidental credential exposure.
 * Integrate Secure Software Development Life Cycle (SSDLC) practices with continuous security testing.
 
----
 
 ### **2. Shipping Server - FTP Exposure & Binary Credential Leakage**
 
@@ -82,6 +76,7 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * **Severity:** Critical
 * **Attack Surface:** Internal network, developer tools
 * **Impact:** Credential leakage allowed privilege escalation and lateral movement into the hospital server network. Poor development practices resulted in static credential reuse and credential reuse across services.
+
 
 #### **Remediation & Secure Implementation**
 
@@ -97,7 +92,7 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * Enforce key-based SSH authentication with hardware-backed keys (Yubikeys, HSM).
 * Disable all unused services by default ("default deny posture").
 
----
+
 
 ### **3. Hospital Network - Weak Backup Encryption**
 
@@ -111,6 +106,7 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * **Severity:** Critical
 * **Attack Surface:** Internal network, backup storage
 * **Impact:** Successful brute-force of backup encryption led to credential theft and sensitive healthcare data compromise. In a regulated environment (e.g. HIPAA), this represents a major compliance violation.
+
 
 #### **Remediation & Secure Implementation**
 
@@ -126,7 +122,6 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * Implement access logging and alerting for unauthorized backup access.
 * Regularly rotate and revoke encryption keys according to a defined key management policy (NIST SP 800-57).
 
----
 
 ### **4. Airport Web Server - File Upload Vulnerability Leading to RCE**
 
@@ -140,6 +135,7 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * **Severity:** Critical
 * **Attack Surface:** Public-facing web portal
 * **Impact:** Remote code execution led to full server compromise. Attackers could pivot into critical airport infrastructure, placing physical safety and operational control systems at risk.
+
 
 #### **Remediation & Secure Implementation**
 
@@ -157,7 +153,6 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * Apply SELinux or AppArmor profiles to enforce strict system call restrictions on web server processes.
 
 
----
 
 ## **Future Expansion Opportunities**
 
