@@ -35,6 +35,12 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 
 ### **1. Pharmaceutical Company - Web Application Exposure**
 
+![Screenshot 2025-06-16 082447](https://github.com/user-attachments/assets/c7a384c4-17a7-4060-9be2-9a63d16d1725)
+
+![Screenshot 2025-06-16 080609](https://github.com/user-attachments/assets/5e9e9182-da4b-491f-9566-ec8659d6c2a2)
+
+
+
 #### **Identified Vulnerability: Insecure Client-Side Credential Exposure**
 
 * FTP credentials were hardcoded directly into JavaScript files on the public web application.
@@ -66,6 +72,11 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 
 ### **2. Shipping Server - FTP Exposure & Binary Credential Leakage**
 
+![Screenshot 2025-06-16 080618](https://github.com/user-attachments/assets/be3ca6d0-c7f2-4702-a467-7f0d8e0db213)
+
+![Screenshot 2025-06-16 080850](https://github.com/user-attachments/assets/29e4a980-de2c-4dc3-8675-6074d398283a)
+
+
 #### **Identified Vulnerabilities:**
 
 * FTP service exposed internally with weak credential enforcement.
@@ -96,6 +107,13 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 
 ### **3. Hospital Network - Weak Backup Encryption**
 
+![Screenshot 2025-06-16 081242](https://github.com/user-attachments/assets/7fdfc795-8c12-43c4-bc0e-904e30781478)
+
+![Screenshot 2025-06-16 082004](https://github.com/user-attachments/assets/d7748ea7-71b0-4594-a7ba-d91e49755e4d)
+
+![Screenshot 2025-06-16 082117](https://github.com/user-attachments/assets/48518b73-0a8e-497b-a957-5e553577f880)
+
+
 #### **Identified Vulnerability: Weak Encryption & Poor Key Management**
 
 * Encrypted backups were protected with low-entropy, dictionary-based passwords.
@@ -124,6 +142,13 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 
 
 ### **4. Airport Web Server - File Upload Vulnerability Leading to RCE**
+
+![Screenshot 2025-06-16 082145](https://github.com/user-attachments/assets/1b579515-f4f4-4e50-b159-d4767f463054)
+
+![Screenshot 2025-06-16 082240](https://github.com/user-attachments/assets/7a0f4744-fd37-49e9-82ba-a89e7440e2f8)
+
+![Screenshot 2025-06-16 082328](https://github.com/user-attachments/assets/60dbfebf-8c2f-44b2-812f-1c5b6a74b1ae)
+
 
 #### **Identified Vulnerability: Unrestricted File Upload**
 
