@@ -1,14 +1,14 @@
-# **Cororate CTF Simulation: Creation Process & Security Analysis**
+# **Cororate CTF Simulation: Security Analysis**
 
 
 ## **Overview**
 
 This **Enterprise Capture The Flag Simulation** replicates a real-world, multi-stage penetration testing engagement across multiple corporate environments. The simulated enterprise includes:
 
-1. **Pharmaceutical Company** — Web Application Exposure
-2. **Shipping Server** — FTP Credential Leak & Binary Reverse Engineering
-3. **Hospital Network** — SSH Access & Backup Encryption Weakness
-4. **Airport Web Server** — File Upload Vulnerability → Remote Code Execution (RCE)
+1. **Pharmaceutical Company**  Web Application Exposure
+2. **Shipping Server**  FTP Credential Leak & Binary Reverse Engineering
+3. **Hospital Network**  SSH Access & Backup Encryption Weakness
+4. **Airport Web Server**  File Upload Vulnerability -> Remote Code Execution (RCE)
 
 The primary goal was to simulate full attacker lifecycle activity, including initial access, credential harvesting, privilege escalation, lateral movement, data exfiltration, and remote code execution, while simultaneously identifying and documenting **remediation strategies** and **enterprise security controls** applicable to each scenario.
 
@@ -20,7 +20,6 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * Highlight and document real-world remediation techniques.
 * Demonstrate an understanding of secure architecture and system hardening.
 
-
 ## **Key Security Competencies Demonstrated**
 
 * **Penetration Testing Methodologies:** Reconnaissance, Exploitation, Privilege Escalation, Lateral Movement.
@@ -29,6 +28,32 @@ The primary goal was to simulate full attacker lifecycle activity, including ini
 * **Incident Response & Remediation Planning:** Detailed vulnerability analysis with actionable mitigation steps.
 * **Network Security Architecture:** Segmentation, access control, defense-in-depth design.
 * **Security Automation:** Continuous integration of static code analysis, secrets scanning, and system auditing.
+
+
+## **Network Diagram**
+
+``` mermaid
+graph TD
+    classDef critical stroke:#ffcccc,fill:#ff0000;
+    classDef high stroke:#ffe6cc,fill:#ff6600;
+    classDef remediation stroke:#cce6ff,fill:#0066cc;
+    
+    A[Pharmaceutical Company<br>Web App Exposure]:::high
+    B[Shipping Server<br>FTP & Binary Leak]:::critical
+    C[Hospital Network<br>Weak Backup Encryption]:::critical
+    D[Airport Web Server<br>File Upload → RCE]:::critical
+    
+    Internet((Internet)) -->|Initial Access| A
+    A -->|"Hardcoded FTP Creds"| B
+    B -->|"Reverse Engineered SSH Creds"| C
+    C -->|"Decrypted Backup Creds"| D
+    
+    R[Remediation Controls]:::remediation
+    R -->|Secure Coding & Secrets Mgmt| A
+    R -->|Deprecate FTP & Binary Analysis| B
+    R -->|Strong Encryption & Key Mgmt| C
+    R -->|File Validation & WAF| D
+```
 
 
 ## **Creation Process & Security Analysis**
