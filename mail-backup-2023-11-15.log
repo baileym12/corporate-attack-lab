@@ -1,0 +1,44 @@
+[2023-11-15 08:42:11] From: support@company.com  
+To: employees@company.com  
+Subject: Scheduled Maintenance Tonight  
+Message: IT will perform server maintenance from 2 AM to 4 AM. Expect brief downtime.  
+
+[2023-11-15 09:15:33] From: hr@company.com  
+To: all-staff@company.com  
+Subject: Holiday Party Reminder  
+Message: Don't forget the annual holiday party on Dec 20th! RSVP by Friday.  
+
+[2023-11-15 10:03:47] From: noreply@company-vpn.com  
+To: j.smith@company.com  
+Subject: Your VPN Access Credentials  
+Message:  
+Hello James,  
+
+As requested, here are your new VPN credentials:  
+Username: j.smith  
+Password: $3cur3_VPN_2023!  
+
+Please ensure you change this password after first login.  
+
+Best regards,  
+IT Support  
+
+[2023-11-15 11:22:19] From: alerts@security.company.com  
+To: admins@company.com  
+Subject: Suspicious Login Attempt  
+Message: Multiple failed SSH attempts detected from IP 192.168.1.105.  
+
+[2023-11-15 12:45:56] From: marketing@company.com  
+To: sales-team@company.com  
+Subject: New Product Launch  
+Message: Check out the latest features in our Q4 release!  
+
+[2023-11-15 14:30:08] From: billing@company.com  
+To: accounting@company.com  
+Subject: Invoice #4412  
+Message: Attached is the invoice for the recent software license renewal.  
+
+[2023-11-15 16:18:42] From: helpdesk@company.com  
+To: m.johnson@company.com  
+Subject: Password Reset Confirmation  
+Message: Your password has been successfully reset. Contact us if you did not initiate this request.  

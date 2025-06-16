@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PharmaCorp - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to PharmaCorp</h1>
+        <div class="dashboard">
+            <h2 id="welcomeMessage">Welcome, User</h2>
+            <div class="actions">
+                <a href="/search.html">Search Drugs</a>
+                <a href="/feedback.html">Submit Feedback</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // XSS vulnerability - user input reflected without sanitization
+        const urlParams = new URLSearchParams(window.location.search);
+        const user = urlParams.get('user');
+        if (user) {
+            document.getElementById('welcomeMessage').innerHTML = `Welcome, ${user}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PharmaCorp - Admin Panel</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <div class="admin-actions">
+            <h2>Confidential Information</h2>
+            <p>Flag: <span id="flag">Loading...</span></p>
+            <p><a href="/flag.txt">View raw flag</a></p>
+        </div>
+    </div>
+
+    <script>
+        // IDOR vulnerability - check for admin is client-side only
+        const urlParams = new URLSearchParams(window.location.search);
+        const isAdmin = urlParams.get('admin') === 'true';
+        
+        if (isAdmin) {
+            fetch('/flag.txt')
+                .then(response => response.text())
+                .then(text => document.getElementById('flag').textContent = text);
+        } else {
+            document.getElementById('flag').textContent = "Access denied";
+        }
+    </script>
+</body>
+</html>

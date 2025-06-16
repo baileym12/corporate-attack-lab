@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PharmaCorp - Drug Search</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drug Search</h1>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search drugs...">
+            <button onclick="searchDrugs()">Search</button>
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <script>
+        // DOM-based XSS vulnerability
+        function searchDrugs() {
+            const query = document.getElementById('searchInput').value;
+            document.getElementById('searchResults').innerHTML = 
+                `Search results for: <b>${query}</b><br>
+                Try using our advanced search syntax!`;
+        }
+    </script>
+</body>
+</html>

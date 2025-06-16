@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /secret-admin-panel.html
+Disallow: /backup.zip
+Disallow: /flag.txt
