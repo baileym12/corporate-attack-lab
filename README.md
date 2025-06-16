@@ -1,4 +1,4 @@
-# **Cororate CTF Simulation: Security Analysis**
+# **Corporate CTF Simulation: Security Analysis**
 
 
 ## **Overview**
